@@ -1,16 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Button, ThemeProvider } from "react-native-elements";
+import { StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import Home from "./Home";
+import { createStackNavigator } from "react-navigation-stack";
 
-export default function App() {
-  return (
-    <LinearGradient colors={["#448AFF", "#FFEB3B"]} style={styles.container}>
-      <Home />
-    </LinearGradient>
-  );
+export default class App extends React.Component {
+  render() {
+    return (
+      <LinearGradient colors={["#448AFF", "#FFEB3B"]} style={styles.container}>
+        <Home />
+      </LinearGradient>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -19,5 +21,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "transparent"
+  }
+});
+
+const AppNavigator = createStackNavigator({
+  HomeScreen: {
+    screen: Home
   }
 });

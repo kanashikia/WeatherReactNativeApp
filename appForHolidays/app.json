@@ -1,11 +1,12 @@
 {
   "expo": {
-    "name": "appForHolidays",
+    "name": "Sowton Weather",
     "slug": "appForHolidays",
     "privacy": "unlisted",
     "sdkVersion": "36.0.0",
     "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
+    "description": "Weather app by Antony Lambert",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -19,6 +20,9 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.yourcompany.sowtonweather"
     }
   }
 }
